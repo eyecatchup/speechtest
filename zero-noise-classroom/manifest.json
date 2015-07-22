@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "background.js" ]
+      }
+   },
+   "description": "",
+   "icons": {
+      "128": "assets/icon_128.png",
+      "16": "assets/icon_16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnQhfJtZYuE0nMxXsX/ULE1xmaIW2AcN5UWfGdCM1M0rjnVgisXZFopDfsE9PpSYZsII7I94lS6qSvALuPdHT6vLq5os+Tt4fSZPBlCOh05DWlPX7ogXCjTcehlWxZgVf5lQ3BiFXaubrxIF7F/hiEP5qFZs/If/nnNwXyHsyngB31YUR6yR8XVQOQH0jNlJVn9q8RKN3v/qmSdxDdGZlLYIGh072GsCwlp42D4OwCJyw7fAbk8ZNOm7KRYX3cyYwVRMS2jBn6LNOgzCdaTwqchXPMj+ELcdGEG/+6hTCEQ/JhNMVgt7N2JWB6Wd45+MDJmjnipUVUeMtZ11VUScXsQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "38",
+   "name": "Zero Noise Classroom",
+   "offline_enabled": true,
+   "permissions": [ "https://www.google-analytics.com/", "audioCapture", "fullscreen" ],
+   "short_name": "ZNC",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.6"
+}

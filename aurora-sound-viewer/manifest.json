@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "background.js" ]
+      }
+   },
+   "description": "Sound visualizer, using a custom algorithm.",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCf5FVTKbY/PR8o+n3QBIOgabbKYK28V0xP7t8DHgQR2yOI/iDaI0pRKOSht2AKGBItU/L2o36V6g7zrOT6f9a6/ElgMW1qBmaa8dA7M4wZ846cl36MzagmpokSNTZVgHfxmo5vJhzpV8c792jw2jSy1JRsz31LiJM2Gtdnd89tgwIDAQAB",
+   "manifest_version": 2,
+   "name": "Aurora Sound Viewer",
+   "offline_enabled": true,
+   "permissions": [ "audioCapture", {
+      "fileSystem": [ "write" ]
+   } ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.18"
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Aurora Sound Visualizer</title>
+	<meta name="viewport" content="width=device-width">
+	
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="csmChrome.js"></script>
+	<!--
+	<script type="text/javascript" src="chroma.js"></script>	
+	<script type="text/javascript" src="csmCanvas.js"></script>
+	<script type="text/javascript" src="csmPngSaver.js"></script>
+	<script type="text/javascript" src="appPngSave.html.js"></script>
+	-->
+	<!-- -->
+	<!-- -->
+	<!-- -->
+	
+	<style>
+		@import url("csm1.css");
+		
+		body {
+			font-family:sans-serif;
+			margin:0; padding:3px;
+			background-color:#999; color:#000;
+			-webkit-app-region:drag;
+		}
+		
+		.mainDiv1 { 
+			-webkit-app-region:no-drag;
+			height:100%;
+			margin-top:25px;
+			background-color:#ddd;
+		}
+		
+		.formTable1 > tbody > tr > td {
+			padding:0 5px 10px;
+		}
+	</style>
+	<!--<script type="text/javascript">
+		//$(".test2").html("AppFrame!");
+		//alert(1);
+	</script>-->
+	
+	
+</head>
+<body class="hasFocus" style="">
+
+<div class="windowBtnGroup">
+	<div class="btn btnMin windowBtn_min"></div>
+	<div class="btn btnMax windowBtn_max"></div>
+	<div class="btn btnClose windowBtn_close"></div>	
+</div>
+
+
+<div class="jsHeightToBottom mainDiv1" style="">
+	<div style="padding:10px;">
+		<table class="formTable1">
+		<tr>
+			<td>Recording info:</td>
+			<td>
+				<!--<div>Total time: <span class="jsDuration saveDatum">---</span></div>
+				<div>Total pixel width: <span class="jsTotalPx saveDatum">---</span></div>-->
+				<div>Total: <span class="jsDuration saveDatum">---</span>&nbsp; (<span class="jsTotalPx saveDatum">---</span> pixels)</div>
+			</td>
+		</tr>
+		<tr>
+			<td>Line height:</td>
+			<td><input class="jsLineHeight jsRefreshDimsOnInput" type="number" value="100" min="1" max="300" style="width:10ex;"/> px</td>
+		</tr>
+		<tr>
+			<td>Wrap lines at:</td>
+			<td>
+				<input class="jsLineWidth" type="hidden" value=""/>
+				<input class="jsWrapAt jsRefreshDimsOnInput" type="number" value="1000" style="width:10ex;"/>
+				<select class="jsWrapUnits jsRefreshDimsOnChange">
+					<option value="px">pixels</option>
+					<option value="sec">seconds</option>
+					<option value="min">minutes</option>
+					<option value="nths">N-ths (# lines)</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				Each line: <span class="jsLineTimeEach saveDatum">---</span> seconds&nbsp; (<span class="jsLinePxEach saveDatum">---</span> pixels)
+				<!--<div>Time each line: <span class="jsLineTimeEach saveDatum">---</span> seconds</div>-->
+				<div>Line count: <span class="jsLineCount saveDatum">---</span></div>
+				
+				<div style="margin-top:1em;">Final png image: <span class="jsFinalPngX saveDatum">---</span> x <span class="jsFinalPngY saveDatum">---</span> px</div>
+
+				<div class="jsDimLimitWarning" style="display:none; margin:5px;"><span class="csmWarning">Saved image dimensions limited to 32767 pixels.  Please adjust line height and wrap.</span></div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input class="jsSavePngNow" type="button" value="Save"/>
+				<input class="jsCancelPngNow" type="button" value="Cancel"/>
+			</td>
+		</tr>
+		</table>
+	
+		<div class="debug1" style="display:none;"></div>
+		<div class="warningBox" style="color:#c00;"></div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

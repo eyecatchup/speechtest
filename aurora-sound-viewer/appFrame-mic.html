@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Mic - Aurora Sound Visualizer</title>
+	<meta name="viewport" content="width=device-width">
+	
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="chroma.js"></script>
+	<!-- -->
+	<!-- -->
+		<script type="text/javascript" src="appFrameMic-compiled.js"></script>
+	<!-- -->
+	
+	<style>
+		@import url("csm1.css");
+
+		body {
+			font-family:sans-serif;
+			margin:0; padding:3px;
+			background-color:#555; color:#fff;
+			overflow:hidden
+			-webkit-app-region: drag;
+		}
+
+		a { color:#fff; }
+	</style>
+	<!--<script type="text/javascript">
+		//$(".test2").html("AppFrame!");
+		//alert(1);
+	</script>-->
+	
+	
+</head>
+<body class="hasFocus" style="">
+
+
+<div class="controls1 controlsBar" style="">
+	<input type="button" class="startBtn" value="Start"/>
+	<input type="button" class="stopBtn" value="Stop"/>
+	<span style="/*margin-left:20px;*/" class="divAudio1"></span>
+	&nbsp; <a class="settingsToggler" href="#">Settings &#x25BE;</a>
+	&nbsp;&nbsp;
+	<a href="#" class="csmPngStartBtn">Create image...</a>
+	<!--<input type="button" class="csmPngStartBtn" value="Create image"/>-->
+
+
+	
+	<div style="position:relative;">
+		<div class="flyoutsDiv" style="position:absolute;">
+			<div>loading settings</div>
+		</div>
+	</div>
+</div>
+
+<div class="windowBtnGroup">
+	<div class="btn btnMin windowBtn_min"></div>
+	<div class="btn btnMax windowBtn_max"></div>
+	<div class="btn btnClose windowBtn_close"></div>	
+</div>
+
+
+<div class="appMainArea jsHeightToBottom" style="">
+	<canvas id="canvas" width="200" height="200" style="display:block; margin:0; background-color:black;"></canvas>
+</div>
+
+</body>
+</html>

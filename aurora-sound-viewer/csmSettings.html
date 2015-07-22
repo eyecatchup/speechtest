@@ -1,0 +1,57 @@
+﻿<style>
+	.algPhaseOut { color: #ccc; }
+</style>
+
+<div class="settingsDiv" style="display:none; padding:15px 10px 10px; background-color:rgba(85, 85, 85, 0.66);">
+
+	<span title="Algorithm">Mode:</span> <select class="csmAlg">
+		<!-- -->
+		<!-- -->
+			<option value="SpectLog">Spectrogram-log</option>
+			<option value="HueDots">Dots</option>
+			<option value="HueValues/HSV4">Aurora</option>
+			<option value="ColorDbl/HSV4">Aurora+vocal</option>
+		<!-- -->
+	</select>
+
+	<span title="Amount to apply noise reduction">Noise reduce:</span> <!--<input type="number" class="csmDamper" min="0" max="1">-->
+	<select class="csmDamper">
+		<option value="0">Off</option>
+		<option value="0.25">25%</option>
+		<option value="0.50">50%</option>
+		<option value="0.75">75%</option>
+		<option value="1">Full</option>
+	</select>
+
+	<span title="Color steps to render sound">Steps:</span> <input type="text" class="csmLogSteps" size="2" value=""/>
+	Sample: <select class="csmBufferSize">
+		<option value="512">Fast</option>
+		<option value="1024">Medium</option>
+		<option value="2048">Slow</option>
+		<option value="4096">Slow x2</option>
+		<option value="8192">Slow x4</option>
+		<option value="16384">Super-slow-mo</option>
+	</select>
+	<span title="Scroll speed in px/frame">Speed:</span> <select class="csmMoveByPx">
+		<option value="1">1px</option>
+		<option value="2">2px</option>
+	</select>
+	<!-- -->
+
+	&nbsp; | &nbsp;
+	<span style="opacity:0.6;">
+		<span title="Frequency range to use for primary spectrogram (log)">Range (Hz):</span> <input type="text" class="csmLog1Min" size="3" value=""/>-<input type="text" class="csmLog1Max" size="3" value=""/>
+	</span>
+
+</div>
+
+
+<div class="csmPngDiv" style="display:none;">
+	<div style="display:inline-block; padding:15px 10px 10px; background-color:rgba(85, 85, 85, 0.66);">
+		<span style="font-size:22px; color:red; padding:-2px 3px -2px 0;">&#9679;</span> Capturing...
+		&nbsp;<input type="button" class="csmPngDiscardBtn" value="Discard"/>
+		<input type="button" class="csmPngSaveBtn" value="Save..."/>
+	</div>
+</div>
+
+

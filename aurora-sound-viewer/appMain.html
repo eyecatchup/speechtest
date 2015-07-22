@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Aurora - Main</title>
+	<meta name="viewport" content="width=device-width">
+	
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="csmChrome.js"></script>
+	<script type="text/javascript" src="appMain.html.js"></script>
+	
+	<style>
+		@import url("csm1.css");
+
+		body {
+			font-family:sans-serif;
+			margin:0; padding:3px;
+			background-color:#999; color:#000;
+			-webkit-app-region:drag;
+		}
+		
+		.mainDiv1 { 
+			-webkit-app-region:no-drag;
+			height:100%;
+			margin-top:25px;
+			background-color:#ddd;
+		}
+		
+		.selectline {
+			margin:5px;
+		}
+		.selectline:first-child { margin-top:0; }
+		
+		label.presetLbl {
+			border-radius:5px;
+			padding:10px 8px 10px 4px;
+			margin-right:3px;
+		}
+		.presetLbl:hover { background-color:rgba(0,0,0,0.1); }
+		label.presetChecked,
+		label.presetChecked:hover {
+			background-color:#337;
+			color:#fff;
+		}
+		
+		.jsPresetDesc {
+			display:none;
+			margin-top:15px;
+		}
+	</style>
+	
+	
+</head>
+<body class="hasFocus" style="">
+
+<div class="windowBtnGroup">
+	<div class="btn btnMin windowBtn_min"></div>
+	<div class="btn btnMax windowBtn_max"></div>
+	<div class="btn btnClose windowBtn_close"></div>	
+</div>
+
+
+<div class="jsHeightToBottom mainDiv1" style="">
+	<div style="padding:10px;">
+		<table>
+		<tr>
+			<th style="padding:10px;">
+				Presets:&nbsp;<a target="_blank" href="http://aurorasound.tumblr.com/post/64179034420/settings-presets">(?)</a>
+			</th>
+			<td style="padding:10px;">
+				<label class="presetLbl presetChecked" data-presetname="voice">
+					<input type="radio" name="aPreset" class="jsPresetRdo" value="&amp;alg=ColorDbl/HSV4&amp;moveByPx=1&amp;bufferSize=512&logSteps=7" checked/> Voice
+				</label>
+				<label class="presetLbl" data-presetname="music">
+					<input type="radio" name="aPreset" class="jsPresetRdo" value="&amp;alg=HueValues/HSV4&amp;moveByPx=1&amp;bufferSize=1024&logSteps=32"/> Music
+				</label>
+				<label class="presetLbl" data-presetname="ambient">
+					<input type="radio" name="aPreset" class="jsPresetRdo" value="&amp;alg=HueValues/HSV4&amp;moveByPx=1&amp;bufferSize=16384&logSteps=32"/> Ambient
+				</label>
+				<div style="min-height:2.5em;">
+					<div class="jsPresetDesc jsPresetDesc_voice" style="display:block;"><b>Voice</b> - settings optimized for voice recognition.  Very fast sample rate, to see syllables in regular speech.  More discrete color palette ("steps") for clarity.  Color range shifted to higher frequencies, to minimize effect of voice pitch on color.</div>
+					<div class="jsPresetDesc jsPresetDesc_music"><b>Music</b> - settings optimized for viewing patterns and qualities of music.  A medium sample rate, and smoother color range, for truer sound representation.</div>
+					<div class="jsPresetDesc jsPresetDesc_ambient"><b>Ambient</b> - settings optimized for viewing historical ambient sounds.  Sample rate is super-slow-motion, to show a history of sound at a glance.</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th style="padding:10px;">
+				Sound Input:
+			</th>
+			<td style="padding:10px;">
+				<!--<b>Select input:</b>-->
+				<div class="selectline"><label><input type="radio" name="aInput" value="microphone" class="" checked/> Microphone</label></div>
+				<div class="selectline"><label><input type="radio" name="aInput" value="userFile" class=""/> MP3 file</label></div>
+				<div class="selectline">
+					<label><input type="radio" name="aInput" value="demo" class=""/> Demo</label>
+					<select name="audioFile" class="audioFile">
+						<option value="sound/vowels3.wav.mp3">vowels3</option>
+						<option value="sound/vowels_demo2.mp3">vowels_demo2</option>
+						<option value="sound/1to10.mp3">Numbers 1 to 10</option>
+						<option value=""></option>
+						<option value="sound/antimoon.com-vowels1.mp3">antimoon.com-vowels1</option>
+						<!-- -->
+						<option value=""></option>
+						<!-- -->
+					</select>
+				</div>
+				<div style="margin-top:25px;">
+					<input type="button" name="goBtn" class="goBtn" style="padding:3px 8px;" value="Start viewer"\>
+				</div>
+			</td>
+		</tr>
+		</table>
+		
+		<div class="debug1" style="display:none;"></div>
+		<div class="warningBox" class="csmWarning"></div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

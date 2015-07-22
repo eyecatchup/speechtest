@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZeroNoiseClassroom</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div id="container"><table height="100%" width="100%"><tr valign="middle"><td style=""><div id="content"><table height="100%" width="100%"><tr valign="middle"><td style="">
+		<div id="timer">5:00</div>
+		<div id="control"><input title="Time in minutes 0-60 (may include decimals)" type="text" id="timeSelect" value="5" />
+		<button title="Start" id="startButton"><span class="icon-play3"></span></button>
+		<button title="Stop" id="stopButton" disabled="disabled"><span class="icon-stop2"></span></button>
+		<input title="Maximum noise allowed 10-98 (it is a percentaje of the maximum noise, red lines will appear above that value)" type="text" id="sensitivitySelect" value="75" />
+		<button title="Toggle fullscreen" id="fullscreenButton"><span class="icon-enlarge"></span></button>
+		<button title="Toogle final sounds" id="muteButton"><span class="icon-volume-high"></span></button>
+		<button title="Toogle blur" id="blurButton"><span class="icon-radio-checked"></span></button>
+		<button title="About | Help" id="infoButton"><span style="position:relative;top:-1px;left:0px;font-family:'PT Mono'"><b>i</b></span></button>
+		</div>
+		</td></tr></table></div></td></tr></table>
+	</div>
+	<canvas id="meter" width="1920" height="10"></canvas>
+	<audio id="metronome">
+    <source src="metronome.mp3" type="audio/mpeg">
+  </audio>
+  	<audio id="alarm">
+    <source src="alarm.mp3" type="audio/mpeg">
+  </audio>
+    <script src="google-analytics-bundle.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
